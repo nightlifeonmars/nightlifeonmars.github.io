@@ -34,10 +34,14 @@ body {
 }
 
 .venmo, .paypal {
-  width: 240px;
+  width: 300px;
   padding-top: 12px;
   padding-bottom: 12px;
   margin: auto;
+}
+
+.venmo img, .paypal img {
+  width: 240px;
 }
 
 .container {
@@ -64,6 +68,7 @@ img {
 
 .small {
   font-size: 14px;
+  text-align: center;
 }
 
 a {
@@ -72,4 +77,36 @@ a {
 
 .cc-logo {
   width: 72px;
+}
+
+.apple-pay {
+  height: 48px;
+  margin-bottom: 12px;
+  width: auto;
+}
+
+.google-pay {
+  height: 44px;
+  margin-bottom: 14px;
+  width: auto;
+}
+
+p {
+  text-align: left;
+  max-width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.logos p{
+  text-align: center;
+}
+
+.tip-input {
+  text-align: center;
+  font-size: 24px;
+}
+
+.tip-input input {
+  height: 24px;
 }

@@ -36,17 +36,19 @@
 
     <!-- Create a button that your customers click to complete their purchase. Customize the styling to suit your branding. -->
 
-    <div class="">
-      <!-- <h1><u>Credit Card</u></h1> -->
-      <p>
-        <img class="cc-logo" src="images/visa.png">
-        <img class="cc-logo" src="images/mastercard.png">
-        <img class="cc-logo" src="images/american_express.png">
-      </p>
-      <p>To tip with a credit card, enter the amount (whole dollar amounts only) below and click the Tip button.</p>
+    <div class="credit-cards">
+      <div class="logos">
+        <p>
+          <img class="cc-logo" src="images/visa.png">
+          <img class="cc-logo" src="images/mastercard.png">
+          <img class="cc-logo" src="images/american_express.png">
+          <img class="apple-pay" src="images/apple_pay.png">
+          <img class="google-pay" src="images/google_pay.png">
+        </p>
+      </div>
+      <p>To tip with a credit card, Apple Pay, or Google Pay, enter the amount (whole dollar amounts only) below and click the Tip button.</p>
       <p><em>You will be taken to Stripe to complete payment.</em></p>
-      Tip amount: <input type="text" id="tip-input" size="3">
-      <br /><br />
+      <p class="tip-input">Tip amount: <input type="text" id="tip-input" size="3"></p>
       <!-- <p>Tip $<span id="tip-amount">0</span></p> -->
       <button
         style="background-color:#6772E5;color:#FFF;padding:8px 12px;border:0;border-radius:4px;font-size:1em"
@@ -58,7 +60,6 @@
 
       <div id="error-message"></div>
     </div>
-
   </div>
   <script>
     $("#tip-input").on("keyup", function(e) {
