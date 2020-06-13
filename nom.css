@@ -13,10 +13,10 @@
 }
 @media (min-width: 800px) {
   .container {
-    width: 35%;
+    width: 40%;
   }
   .banner {
-    width: 35%;
+    width: 40%;
     margin: auto;
   }
   .venmo, .paypal {
@@ -39,6 +39,7 @@ body {
 .container {
   margin: auto;
   text-align: center;
+  font-size: 18px;
 }
 
 h1, h2, h3, h4, p {
@@ -55,4 +56,8 @@ button:hover {
 
 img {
   width: 100%;
+}
+
+.small {
+  font-size: 14px;
 }

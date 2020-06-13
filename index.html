@@ -15,18 +15,20 @@
   </div>
   <div class="container">
     <div class="">
-      <p>Thanks so much for supporting Nightlife on Mars! We hope you enjoyed the show.</p>
-      <p>If you would like to tip us, please consider one of the following methods:</p>
+      <p>Thank you so much for supporting Nightlife on Mars! We hope you enjoyed the show.</p>
+      <p>If you would like to tip us, please consider one of the following methods (funds from all sources are distributed evenly):</p>
     </div>
     <div class="venmo">
       <a href="https://venmo.com/red-scott" target="_blank">
         <img src="images/venmo.png">
       </a>
+      <p class='small'>Click above to pay @Red-Scott</p>
     </div>
     <div class="paypal">
       <a href="https://paypal.me/vietjew" target="_blank">
         <img src="images/paypal.png">
       </a>
+      <p class="small">Click above to pay vietjew aka Joseph Nguyen</p>
     </div>
 
     <!-- Load Stripe.js on your website. -->
@@ -43,7 +45,7 @@
       <!-- <p>Tip $<span id="tip-amount">0</span></p> -->
       <button
         style="background-color:#6772E5;color:#FFF;padding:8px 12px;border:0;border-radius:4px;font-size:1em"
-        id="checkout-button-price_1GtUKDIaxOJy55IKUyGt8DX9"
+        id="checkout-button-price_1GtUFfIaxOJy55IKSKfD1u4Z"
         role="link"
       >
         Tip $<span id="tip-amount">1</span>
@@ -63,8 +65,8 @@
       $('#tip-amount').text(tipAmount);
     });
     (function() {
-      var stripe = Stripe('pk_test_51GtSh8IaxOJy55IKx2NsaU7bOnhGWb8v9VvGdrOuwz5Qk45cPhSBNpVrch82DPHYUQKFCYOkRgDtZWp0GHMRVZiH00Pavp5ura');
-      var checkoutButton = document.getElementById('checkout-button-price_1GtUKDIaxOJy55IKUyGt8DX9');
+      var stripe = Stripe('pk_live_rBusUh9Y5SLa5YRQTz71jlFd00xXZ22tCN');
+      var checkoutButton = document.getElementById('checkout-button-price_1GtUFfIaxOJy55IKSKfD1u4Z');
       checkoutButton.addEventListener('click', function () {
         // When the customer clicks on the button, redirect
         // them to Checkout.
@@ -75,7 +77,7 @@
         }
         console.log(tipQuantity);
         stripe.redirectToCheckout({
-          lineItems: [{price: 'price_1GtUKDIaxOJy55IKUyGt8DX9', quantity: tipQuantity}],
+          lineItems: [{price: 'price_1GtUFfIaxOJy55IKSKfD1u4Z', quantity: tipQuantity}],
           mode: 'payment',
           // Do not rely on the redirect to the successUrl for fulfilling
           // purchases, customers may not always reach the success_url after
