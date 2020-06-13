@@ -6,12 +6,26 @@
     width: 100%;
     margin: auto;
   }
-  .venmo, .paypal {
+  /* .venmo, .paypal {
     width: 75%;
-    /* max-width: 800px; */
-  }
+    max-width: 240px;
+  } */
 }
 @media (min-width: 800px) {
+  .container {
+    width: 80%;
+  }
+  .banner {
+    width: 80%;
+    margin: auto;
+  }
+  /* .venmo, .paypal {
+    width: 30%;
+    max-width: 400px;
+  } */
+}
+
+@media (min-width: 1200px) {
   .container {
     width: 40%;
   }
@@ -19,9 +33,10 @@
     width: 40%;
     margin: auto;
   }
-  .venmo, .paypal {
+  /* .venmo, .paypal {
+    width: 35%;
     max-width: 400px;
-  }
+  } */
 }
 
 body {
@@ -31,6 +46,7 @@ body {
 }
 
 .venmo, .paypal {
+  width: 240px;
   padding-top: 12px;
   padding-bottom: 12px;
   margin: auto;
@@ -64,4 +80,8 @@ img {
 
 a {
   color: yellow;
+}
+
+.cc-logo {
+  width: 72px;
 }
