@@ -1,4 +1,19 @@
 body {
   background-color: black;
   color: white;
+  letter-spacing: normal;
+}
+
+.pure-g {
+  width: 30%;
+  margin: auto;
+  text-align: center;
+}
+
+h1, h2, h3, h4, p {
+  letter-spacing: normal;
+}
+
+.venmo img {
+  width: 400px;
 }
