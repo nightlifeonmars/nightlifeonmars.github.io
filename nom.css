@@ -10,10 +10,24 @@ body {
   text-align: center;
 }
 
+.pure-u-sm-1 {
+  width: 90%;
+  margin: auto;
+  text-align: center;
+}
+
 h1, h2, h3, h4, p {
   letter-spacing: normal;
 }
 
 .venmo img {
-  width: 400px;
+  width: 200px;
+}
+
+.stripe {
+  padding-top: 24px;
+}
+
+button:hover {
+  cursor: pointer;
 }
