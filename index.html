@@ -12,12 +12,19 @@
 
 <body>
   <div class="pure-g">
+    <img src='images/nom_banner.jpg'>
     <div class="pure-u-lg-1 pure-u-sm-1">
-      <p>Thanks so much for supporting Nightlife on Mars! We hope you enjoyed the show. If you would like to tip us, please consider one of the following methods:</p>
+      <p>Thanks so much for supporting Nightlife on Mars! We hope you enjoyed the show.</p>
+      <p></p>If you would like to tip us, please consider one of the following methods:</p>
     </div>
     <div class="pure-u-1 venmo">
       <a href="https://venmo.com/red-scott" target="_blank">
         <img src="images/venmo.png">
+      </a>
+    </div>
+    <div class="pure-u-1 paypal">
+      <a href="https://paypal.me/vietjew" target="_blank">
+        <img src="images/paypal.png">
       </a>
     </div>
 
@@ -26,18 +33,19 @@
 
     <!-- Create a button that your customers click to complete their purchase. Customize the styling to suit your branding. -->
 
-    <div class="pure-u-1 stripe">
-      <h3>Tip with credit card using Stripe</h3>
+    <div class="pure-u-1">
+      <h3>Credit Card</h3>
+      <p>If you don't have an account for Venmo or Paypal, you can tip with a credit card. Enter the amount you want to tip (whole dollar amounts only) and click the button.</p>
       <p><em>You will be redirected to Stripe to complete payment</em></p>
       Tip amount: <input type="text" id="tip-input" size="3">
-      <br />
-      <p>Tip $<span id="tip-amount">0</span></p>
+      <br /><br />
+      <!-- <p>Tip $<span id="tip-amount">0</span></p> -->
       <button
         style="background-color:#6772E5;color:#FFF;padding:8px 12px;border:0;border-radius:4px;font-size:1em"
         id="checkout-button-price_1GtUKDIaxOJy55IKUyGt8DX9"
         role="link"
       >
-        Checkout
+        Tip $<span id="tip-amount">1</span>
       </button>
 
       <div id="error-message"></div>
@@ -45,11 +53,13 @@
 
   </div>
   <script>
-    $("#tip-input").on("change", function(e) {
+    $("#tip-input").on("keyup", function(e) {
       var inputAmount = $(e.target).val();
       var tipAmount = parseInt(inputAmount);
+      if (Number.isNaN(tipAmount)) {
+        tipAmount = 1;
+      }
       $('#tip-amount').text(tipAmount);
-      console.log(amount);
     });
     (function() {
       var stripe = Stripe('pk_test_51GtSh8IaxOJy55IKx2NsaU7bOnhGWb8v9VvGdrOuwz5Qk45cPhSBNpVrch82DPHYUQKFCYOkRgDtZWp0GHMRVZiH00Pavp5ura');
