@@ -48,14 +48,14 @@
       </div>
       <p>To tip with a credit card, Apple Pay, or Google Pay, enter the amount (whole dollar amounts only) below and click the Tip button.</p>
       <p><em>You will be taken to Stripe to complete payment.</em></p>
-      <p class="tip-input">Tip amount: <input type="text" id="tip-input" size="3" value="10"></p>
+      <p class="tip-input">Tip amount: <input type="text" id="tip-input" size="3"></p>
       <!-- <p>Tip $<span id="tip-amount">0</span></p> -->
       <button
         style="background-color:#6772E5;color:#FFF;padding:8px 12px;border:0;border-radius:4px;font-size:1em"
         id="checkout-button-price_1GtUFfIaxOJy55IKSKfD1u4Z"
         role="link"
       >
-        Tip $<span id="tip-amount">10</span>
+        Tip $<span id="tip-amount">?</span>
       </button>
 
       <div id="error-message"></div>
@@ -66,7 +66,7 @@
       var inputAmount = $(e.target).val();
       var tipAmount = parseInt(inputAmount);
       if (Number.isNaN(tipAmount)) {
-        tipAmount = 1;
+        tipAmount = '?';
       }
       $('#tip-amount').text(tipAmount);
     });
@@ -79,7 +79,7 @@
         var tipInput = $('#tip-input').val();
         var tipQuantity = parseInt(tipInput);
         if (Number.isNaN(tipQuantity)) {
-          tipQuantity = 1;
+          tipQuantity = 20;
         }
         console.log(tipQuantity);
         stripe.redirectToCheckout({
