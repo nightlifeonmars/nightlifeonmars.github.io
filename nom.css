@@ -1,17 +1,42 @@
+@media (max-width: 799px) {
+  .container {
+    width: 95%;
+  }
+  .banner {
+    width: 100%;
+    margin: auto;
+  }
+  .venmo, .paypal {
+    width: 75%;
+    /* max-width: 800px; */
+  }
+}
+@media (min-width: 800px) {
+  .container {
+    width: 35%;
+  }
+  .banner {
+    width: 35%;
+    margin: auto;
+  }
+  .venmo, .paypal {
+    max-width: 400px;
+  }
+}
+
 body {
   background-color: black;
   color: white;
   letter-spacing: normal;
 }
 
-.pure-g {
-  width: 35%;
+.venmo, .paypal {
+  padding-top: 12px;
+  padding-bottom: 12px;
   margin: auto;
-  text-align: center;
 }
 
-.pure-u-sm-1 {
-  width: 90%;
+.container {
   margin: auto;
   text-align: center;
 }
@@ -20,20 +45,14 @@ h1, h2, h3, h4, p {
   letter-spacing: normal;
 }
 
-.venmo img, .paypal img {
-  width: 200px;
-  padding-bottom: 12px;
-  padding-top: 12px;
-}
-
-img {
-  width: 100%;
-}
-
 .stripe {
   padding-top: 24px;
 }
 
 button:hover {
   cursor: pointer;
+}
+
+img {
+  width: 100%;
 }
